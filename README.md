@@ -76,7 +76,9 @@ valeur financière.
 Pour une perte $L$ et un niveau $\alpha \in (0, 1)$ :
 
 $\text{VaR}_\alpha(L) = q_\alpha(L)$  
-$\text{ES}_\alpha(L) = \frac{1}{1 - \alpha} \int_\alpha^1 \text{VaR}_u(L) \, du$, soit $\mathbb{E}[L \mid L \geq \text{VaR}_\alpha(L)]$ pour une loi continue  
+
+$\text{ES}_\alpha(L) = \frac{1}{1 - \alpha} \int_\alpha^1 \text{VaR}_u(L) \, du$, soit $\mathbb{E}[L \mid L \geq \text{VaR}_\alpha(L)]$ pour une loi continue 
+ 
 Cas gaussien $L \sim \mathcal{N}(m, s^2)$ : $\text{VaR} = m + s \cdot \Phi^{-1}(\alpha)$ et $\text{ES} = m + s \frac{\phi(\Phi^{-1}(\alpha))}{1-\alpha}$
 
 où $\Phi$ est la fonction de répartition de la loi normale standard et $\phi$ sa densité.
