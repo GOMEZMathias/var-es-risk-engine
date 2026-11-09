@@ -73,11 +73,11 @@ valeur financière.
 
 ## Méthodes
 
-Pour une perte $L$ et un niveau $α ∈ (0, 1)$ :
+Pour une perte $L$ et un niveau $\alpha \in (0, 1)$ :
 
-- $VaR_α(L) = q_α(L)$
-- $ES_α(L) = \frac{1}{(1 − α)} ∫_α^1 VaR_u(L) du$, soit $\mathbb{E}[L\mid L\geq \operatorname{VaR}_{\alpha\%}(L)]$ pour une loi continue
-- Cas gaussien $L\sim\mathcal N(m, s²)$ : $VaR = m + s·Φ⁻¹(α)$ et $ES = m+s\frac{\phi(\Phi^{-1}(\alpha))}{1-\alpha}$
+- $\text{VaR}_\alpha(L) = q_\alpha(L)$
+- $\text{ES}_\alpha(L) = \frac{1}{(1 - \alpha)} \int_\alpha^1 \text{VaR}_u(L) \, du$, soit $\mathbb{E}[L \mid L \geq \text{VaR}_\alpha(L)]$ pour une loi continue
+- Cas gaussien $L \sim \mathcal{N}(m, s^2)$ : $\text{VaR} = m + s \cdot \Phi^{-1}(\alpha)$ et $\text{ES} = m + s \frac{\phi(\Phi^{-1}(\alpha))}{1-\alpha}$
 
 où $\Phi$ est la fonction de répartition de la loi normale standard et $\phi$ sa densité.
 
