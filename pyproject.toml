@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "var-es-risk-engine"
+version = "0.1.0"
+description = "VaR et Expected Shortfall : Monte-Carlo, historique, gaussien, backtesting"
+requires-python = ">=3.10"
+dependencies = ["numpy", "pandas", "scipy", "matplotlib", "yfinance"]
+
+[tool.setuptools]
+packages = ["var_es"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
