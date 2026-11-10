@@ -77,7 +77,7 @@ Pour une perte $L$ et un niveau $\alpha \in (0, 1)$ :
 
 La Value at Risk $\text{VaR}_\alpha(L) = q_\alpha(L)$  
 
-L' Expected Shortfall $\text{ES}_\alpha(L) = \frac{1}{1 - \alpha} \int_\alpha^1 \text{VaR}_u(L) \, du$, soit $\mathbb{E}[L \mid L \geq \text{VaR}_\alpha(L)]$ pour une loi continue 
+L' Expected Shortfall $\text{ES}_\alpha(L) = \frac{1}{1 - \alpha} \int_\alpha^1 \text{VaR}_u(L) \, du$ , soit $\mathbb{E}[L \mid L \geq \text{VaR}_\alpha(L)]$ pour une loi continue 
 
 Cas gaussien $L \sim \mathcal{N}(m, s^2)$ : $\text{VaR} = m + s \cdot \Phi^{-1}(\alpha)$ et $\text{ES} = m + s \frac{\phi(\Phi^{-1}(\alpha))}{1-\alpha}$
 
@@ -142,7 +142,7 @@ regroupées ($p$ = 0,0006). Aucun modèle ne passe tous les tests à 99 %.
 
 ### Convergence Monte-Carlo (Matrice de covariance empirique des ETF, 100 répétitions)
 
-Évaluation de la vitesse de convergence de l'erreur absolue moyenne sur $M = 100$ répétitions indépendantes par rapport à la formule gaussienne fermée ($\text{VaR}_{99\%} = 3\,615{,}99\text{ €}$, $\text{ES}_{99\%} = 4\,148{,}83\text{ €}$) :
+Évaluation de la vitesse de convergence de l'erreur absolue moyenne sur $M = 100$ répétitions indépendantes par rapport à la formule gaussienne fermée ( $\text{VaR}_{99\%} = 3\,615{,}99\text{ €}$ , $\text{ES}_{99\%} = 4\,148{,}83\text{ €}$ ) :
 
 | Simulations ($N$) | Erreur VaR (€) | Erreur ES (€) | Ordre de grandeur ($\propto 1/\sqrt{N}$) |
 | :---: | :---: | :---: | :---: |
@@ -176,7 +176,6 @@ backtest de l'ES.
 - Le backtest de l'ES n'est pas implémenté (seulement celui de la VaR) : les ES prévues sont calculées mais pas évaluées.
 - La VaR gaussienne glissante estime la moyenne des pertes, l'EWMA la fixe à zéro : la comparaison mélange donc volatilité dynamique et traitement de la moyenne (écart probablement faible).
 - λ = 0,94 est la valeur standard de RiskMetrics, non optimisée sur ces données.
-- Les modèles EWMA ont été ajoutés après un premier backtest ; douze modèles sont comparés sur les mêmes données sans correction pour comparaisons multiples : les p-values sont indicatives.
 - Le test d'indépendance de Christoffersen ne détecte que la dépendance entre jours consécutifs. 
 
 ## Pistes d'amélioration
